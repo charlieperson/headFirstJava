@@ -1,9 +1,6 @@
 class DogTestDrive {
   public static void main(String[] args) {
-    Dog myDog = new Dog();
-    myDog.size = 50;
-    myDog.breed = "chocoLab";
-    myDog.name = "Woofy";
+    Dog myDog = new Dog("Benji", "terrior", 50);
     myDog.bark();
   }
 }
