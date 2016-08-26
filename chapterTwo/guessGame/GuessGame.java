@@ -27,12 +27,18 @@ public class GuessGame {
       if(playerList[i].mGuess == mSecretNum) {
         mWinner = true;
         System.out.println(playerList[i].mName + " wins!!");
-      } else {
-        System.out.println(playerList[i].mName + " did not find the num");
-      }
+      } 
+    }
+    if(mWinner == false) {
+      System.out.println("Nobody found it! Guess again!");
+      rematch();
     }
   }
+
+  void rematch() {
+    for(int i=0; i<playerList.length; i = i+1){
+      playerList[i].setGuess();
+    }
+    findWinner();
+  }
 }
-
-
-    // findWinner(playerList);
