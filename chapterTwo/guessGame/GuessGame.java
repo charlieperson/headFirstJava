@@ -16,26 +16,26 @@ public class GuessGame {
     findWinner();
   }
 
-  void setPlayerAmount() {
+  private void setPlayerAmount() {
     Scanner user_input = new Scanner( System.in );
     System.out.println("How many we got playin'?");
     mNumOfPlayers = Integer.parseInt(user_input.next());
   }
 
-  void findWinner() {
+  private void findWinner() {
     for(int i=0; i<playerList.length; i = i+1){
       if(playerList[i].mGuess == mSecretNum) {
         mWinner = true;
         System.out.println(playerList[i].mName + " wins!!");
-      } 
+      }
     }
     if(mWinner == false) {
-      System.out.println("Nobody found it! Guess again!");
+      System.out.println("\nNobody found it! Guess again!\n\n");
       rematch();
     }
   }
 
-  void rematch() {
+  private void rematch() {
     for(int i=0; i<playerList.length; i = i+1){
       playerList[i].setGuess();
     }

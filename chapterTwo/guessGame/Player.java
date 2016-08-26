@@ -4,12 +4,12 @@ public class Player {
   String mName;
   int mGuess;
 
-  public Player() {
+  Player() {
     setName();
     setGuess();
   }
 
-  void setName() {
+  private void setName() {
     Scanner name_input = new Scanner( System.in );
     System.out.println("What's your name?");
     String name = name_input.next( );
